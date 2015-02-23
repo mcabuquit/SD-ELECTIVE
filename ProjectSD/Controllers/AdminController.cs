@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProjectSD.DAL;
+using ProjectSD.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,11 +10,13 @@ namespace ProjectSD.Controllers
 {
     public class AdminController : Controller
     {
+        MyDatabaseContext db = new MyDatabaseContext();
         //
         // GET: /Admin/
 
         public ActionResult Index()
         {
+
             return View();
         }
 
