@@ -12,7 +12,6 @@ namespace ProjectSD.Models
 
         [Required]
         [Display(Name = "Username")]
-        [DataType(DataType.EmailAddress)]
         public String Username { get; set; }
 
         [Required]

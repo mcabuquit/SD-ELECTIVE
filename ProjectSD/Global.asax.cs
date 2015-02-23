@@ -1,5 +1,7 @@
-﻿using System;
+﻿using ProjectSD.DAL;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
@@ -25,6 +27,7 @@ namespace ProjectSD
             AuthConfig.RegisterAuth();
             BootstrapSupport.BootstrapBundleConfig.RegisterBundles(System.Web.Optimization.BundleTable.Bundles);
             BootstrapMvcSample.ExampleLayoutsRouteConfig.RegisterRoutes(RouteTable.Routes);
+          
         }
     }
 }

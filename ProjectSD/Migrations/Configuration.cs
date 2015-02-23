@@ -11,7 +11,7 @@ namespace ProjectSD.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(ProjectSD.DAL.MyDatabaseContext context)
@@ -30,28 +30,22 @@ namespace ProjectSD.Migrations
             //
 
 
-            var users = new List<Users>
+            var users = new List<Users>()
             {
-                new Users{Username="markjoseph",Password="1234"},
-                new Users{Username="rosemar",Password="1234"}
+                new Users(){Username="admin",Password="1234"}
             };
 
-            users.ForEach(u => context.Users.AddOrUpdate(p => p.Username, u));
+            users.ForEach(s => context.Users.AddOrUpdate(p=>p.Username,s));
             context.SaveChanges();
 
-
-            var persons = new List<PersonalInfo> 
-            { 
-                new PersonalInfo{Name="Mark Joseph Cabuquit",UserID=users.Single(s=>s.Username=="markjoseph").UsersID},
-                new PersonalInfo{Name="Rosemar Magalay",UserID=users.Single(s=>s.Username=="rosemar").UsersID}
+            var persons = new List<PersonalInfo>()
+            {
+                new PersonalInfo(){Name="Mark Joseph Cabuquit",UserID=users.Single(s=>s.Username=="admin").UsersID}
             };
 
-
-            foreach (PersonalInfo p in persons) {
-                var personalInfoDatabase = context.PersonalInfo.Where(
-                    u=>u.Users.UsersID==p.UserID
-                    ).SingleOrDefault();
-                if(personalInfoDatabase==null){
+            foreach(PersonalInfo p in persons){
+                var personalInfoInDatabase = context.PersonalInfo.Where(s => s.Users.UsersID == p.UserID).SingleOrDefault();
+                if(personalInfoInDatabase==null){
                     context.PersonalInfo.Add(p);
                 }
             }

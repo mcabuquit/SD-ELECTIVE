@@ -10,8 +10,8 @@ namespace ProjectSD.DAL
 {
     public class MyDatabaseContext :DbContext
     {
-        public DbSet<Users> Users { set; get; }
-        public DbSet<PersonalInfo> PersonalInfo { set; get; }
+        public DbSet<Users> Users { get; set; }
+        public DbSet<PersonalInfo> PersonalInfo { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
