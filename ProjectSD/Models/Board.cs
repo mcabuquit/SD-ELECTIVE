@@ -7,8 +7,9 @@ namespace ProjectSD.Models
 {
     public class Board
     {
-        public int BoardID {set; get; }
+        public int BoardID {internal set; get; }
         public String BoardName {set; get;}
-        public String DateAdded {set; get;}
+        public DateTime BoardCreated { set; get; }
+        
     }
 }

@@ -178,3 +178,4 @@ C:\Users\NEXT_IX\project\SD-ELECTIVE\ProjectSD\obj\Debug\ProjectSD.pdb
 C:\Users\NEXT_IX\project\SD-ELECTIVE\ProjectSD\obj\Debug\ProjectSD.Migrations.InitialCreate.resources
 C:\Users\NEXT_IX\project\SD-ELECTIVE\ProjectSD\obj\Debug\ProjectSD.csproj.GenerateResource.Cache
 C:\Users\NEXT_IX\project\SD-ELECTIVE\ProjectSD\obj\Debug\ProjectSD.csprojResolveAssemblyReference.cache
+C:\Users\NEXT_IX\project\SD-ELECTIVE\ProjectSD\obj\Debug\ProjectSD.Migrations._201502230356363_InitialCreate.resources

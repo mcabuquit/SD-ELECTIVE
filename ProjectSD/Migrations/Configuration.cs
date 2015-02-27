@@ -50,6 +50,31 @@ namespace ProjectSD.Migrations
                 }
             }
             context.SaveChanges();
+
+
+            var board = new List<Board>()
+            {
+                new Board(){BoardName="Android Project",BoardCreated=DateTime.Now}
+            };
+
+            board.ForEach(b => context.Board.Add(b));
+            context.SaveChanges();
+
+            var member = new List<BoardMember>(){
+                new BoardMember(){
+                    Users=users[0],Board=board[0]
+                }
+            };
+            foreach (BoardMember bm in member)
+            {
+                var boardmemberInDatabase = context.BoardMember.Where(s => s.Users.UsersID == bm.Users.UsersID).SingleOrDefault();
+                if (boardmemberInDatabase == null)
+                {
+                    context.BoardMember.Add(bm);
+                }
+            }
+            context.SaveChanges();
+           
         }
     }
 }

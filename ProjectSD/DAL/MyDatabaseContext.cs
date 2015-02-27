@@ -12,6 +12,8 @@ namespace ProjectSD.DAL
     {
         public DbSet<Users> Users { get; set; }
         public DbSet<PersonalInfo> PersonalInfo { get; set; }
+        public DbSet<Board> Board { get; set; }
+        public DbSet<BoardMember> BoardMember { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

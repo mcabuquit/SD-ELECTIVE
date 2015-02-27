@@ -204,6 +204,10 @@
     <Compile Include="Migrations\201502230356363_InitialCreate.Designer.cs">
       <DependentUpon>201502230356363_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201502270012483_201502230356363_InitialCreate.cs" />
+    <Compile Include="Migrations\201502270012483_201502230356363_InitialCreate.Designer.cs">
+      <DependentUpon>201502270012483_201502230356363_InitialCreate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Board.cs" />
     <Compile Include="Models\BoardMember.cs" />
@@ -211,6 +215,7 @@
     <Compile Include="Models\Registration.cs" />
     <Compile Include="Models\Task.cs" />
     <Compile Include="Models\Users.cs" />
+    <Compile Include="MySession\MyOwnSession.cs" />
     <Compile Include="NavigationRoutes\INavigationRouteFilter.cs" />
     <Compile Include="NavigationRoutes\NamedRoute.cs" />
     <Compile Include="NavigationRoutes\NavigationExtensions.cs" />
@@ -349,12 +354,15 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Registration.cshtml" />
-    <Content Include="Views\Member\Index.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Member\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201502230356363_InitialCreate.resx">
       <DependentUpon>201502230356363_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502270012483_201502230356363_InitialCreate.resx">
+      <DependentUpon>201502270012483_201502230356363_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

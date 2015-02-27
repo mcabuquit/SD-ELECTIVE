@@ -1,5 +1,6 @@
 ﻿using ProjectSD.DAL;
 using ProjectSD.Models;
+using ProjectSD.MySession;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -34,6 +35,10 @@ namespace ProjectSD.Controllers
                 {
                     var result=db.Users.Where(u=>u.Username==user.Username && u.Password==user.Password).Count();
                     if(result>0){
+                        var usr = db.Users.Where(u => u.Username == user.Username && u.Password == user.Password).SingleOrDefault();
+                        //goes to session
+                        MyOwnSession.getInstance().user =usr;
+
                         //if success
                         if (user.Username.Equals("admin"))
                         {

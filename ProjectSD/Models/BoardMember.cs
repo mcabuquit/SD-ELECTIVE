@@ -7,8 +7,9 @@ namespace ProjectSD.Models
 {
     public class BoardMember
     {
-        public int BoardID { set; get; }
-        public int UserID { set; get; }
+        public int BoardMemberID { set; get; }
         public String DateAdded { set; get; }
+        public virtual Users Users { set; get; }
+        public virtual Board Board { set; get; }
     }
 }
